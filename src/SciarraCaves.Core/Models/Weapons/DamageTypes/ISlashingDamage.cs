@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Core.Models
+namespace SciarraCaves.Core.Models.Weapons.DamageTypes
 {
-    public class Enemy
+    public interface ISlashingDamage
     {
     }
 }

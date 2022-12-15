@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SciarraCaves.Core.Models
 {
-    internal class Character
+    public class Character
     {
         internal string Name { get; set; }
 

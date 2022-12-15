@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SciarraCaves.Core.Models
 {
-    public class Enemy
+    public class Name
     {
+        public string Adjective { get; private set; }
+
+        public string Title { get; private set; }
     }
 }

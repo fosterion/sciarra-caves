@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Core.Models
+namespace SciarraCaves.Core.Models.Weapons.GripTypes
 {
-    public class Enemy
+    public interface ITwoHanded
     {
     }
 }

@@ -12,16 +12,26 @@ namespace SciarraCaves.Core.Models
         /// <summary>
         /// Default element known as None
         /// </summary>
-        [Chance(50.00)] None,
+        [Chance(45.00)] None,
 
         /// <summary>
         /// Good against ice element
         /// </summary>
-        [Chance(25.00)] Fire,
+        [Chance(15.00)] Fire,
 
         /// <summary>
-        /// Good against the fire element
+        /// Good against fire element
         /// </summary>
-        [Chance(25.00)] Ice
+        [Chance(15.00)] Ice,
+
+        /// <summary>
+        /// Good against armor
+        /// </summary>
+        [Chance(15.00)] Electricity,
+
+        /// <summary>
+        /// Imposes poison effect
+        /// </summary>
+        [Chance(15.00)] Acid
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Core.Models
+namespace SciarraCaves.Core.Models.Weapons.Base
 {
-    public class Enemy
+    public class Shield
     {
     }
 }

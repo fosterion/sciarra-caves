@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SciarraCaves.Core.Models
 {
-    internal enum Rarity
+    public enum Rarity
     {
         [Chance(45.00)] Common,
         [Chance(27.00)] Uncommon,

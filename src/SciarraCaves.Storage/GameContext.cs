@@ -16,9 +16,8 @@ namespace SciarraCaves.Storage
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
-            var _path = Path.Join(path, "game.db");
 
-            options.UseSqlite($"Data Source={_path}");
+            options.UseSqlite($"Data Source={Path.Join(path, "game.db")}");
         }
 
         protected override void OnModelCreating(ModelBuilder builder)

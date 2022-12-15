@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Core.Models
+namespace SciarraCaves.Core.Enums
 {
-    public class Enemy
+    public enum WeaponDamageType
     {
+        Crushing,
+        Cutting,
+        Piercing
     }
 }
