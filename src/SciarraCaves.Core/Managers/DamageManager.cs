@@ -1,4 +1,6 @@
-﻿using SciarraCaves.Core.Models;
+﻿using SciarraCaves.Assets.Models;
+using SciarraCaves.Assets.Models.Weapons.Base;
+using SciarraCaves.Assets.Models.Weapons.DamageType;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,23 @@ namespace SciarraCaves.Core.Managers
 {
     public class DamageManager
     {
-        public void MakeDamage(Character character, Enemy enemy)
+        public double CalculateDamageQuantity(Weapon weapon, Enemy enemy)
         {
-            // if enemy wears armor 
+            var weaponDamage = weapon.Damage.InstantDamage();
+
+            if (enemy.Shield > 0)
+            {
+                if (weapon is ICuttingDamage)
+                {
+                    weaponDamage -= weaponDamage * 0.05;
+                }
+                if (weapon is ICrushingDamage)
+                {
+                    weaponDamage += weaponDamage * 0.05;
+                }
+            }
+
+            return weaponDamage;
         }
 
         public void TakeDamage(Character character, Enemy enemy)

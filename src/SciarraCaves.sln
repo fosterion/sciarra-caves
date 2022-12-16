@@ -5,15 +5,17 @@ VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SciarraCaves", "SciarraCaves\SciarraCaves.csproj", "{C89C233B-CD74-4E60-B6AA-8579E9793905}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciarraCaves.Account", "SciarraCaves.Account\SciarraCaves.Account.csproj", "{F0E71D90-F228-4341-9308-0F58580994FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SciarraCaves.Account", "SciarraCaves.Account\SciarraCaves.Account.csproj", "{F0E71D90-F228-4341-9308-0F58580994FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciarraCaves.Storage", "SciarraCaves.Storage\SciarraCaves.Storage.csproj", "{1F31B9C2-C7B4-49A0-BE08-53B928D5917D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SciarraCaves.Storage", "SciarraCaves.Storage\SciarraCaves.Storage.csproj", "{1F31B9C2-C7B4-49A0-BE08-53B928D5917D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciarraCaves.Character", "SciarraCaves.Character\SciarraCaves.Character.csproj", "{F1C0904B-FE1A-4910-BD9F-70B0D7FF99AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SciarraCaves.Character", "SciarraCaves.Character\SciarraCaves.Character.csproj", "{F1C0904B-FE1A-4910-BD9F-70B0D7FF99AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciarraCaves.Core", "SciarraCaves.Core\SciarraCaves.Core.csproj", "{16CB80FD-4DD3-4ACE-85B9-562128728936}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SciarraCaves.Core", "SciarraCaves.Core\SciarraCaves.Core.csproj", "{16CB80FD-4DD3-4ACE-85B9-562128728936}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciarraCaves.Localization", "SciarraCaves.Localization\SciarraCaves.Localization.csproj", "{AE7ACAF9-188A-4C40-B983-9113CBB6A5A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SciarraCaves.Localization", "SciarraCaves.Localization\SciarraCaves.Localization.csproj", "{AE7ACAF9-188A-4C40-B983-9113CBB6A5A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SciarraCaves.Assets", "SciarraCaves.Assets\SciarraCaves.Assets.csproj", "{0BCC7352-7B28-4C4D-B2F5-5641122E0399}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{AE7ACAF9-188A-4C40-B983-9113CBB6A5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE7ACAF9-188A-4C40-B983-9113CBB6A5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE7ACAF9-188A-4C40-B983-9113CBB6A5A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BCC7352-7B28-4C4D-B2F5-5641122E0399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BCC7352-7B28-4C4D-B2F5-5641122E0399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BCC7352-7B28-4C4D-B2F5-5641122E0399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BCC7352-7B28-4C4D-B2F5-5641122E0399}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

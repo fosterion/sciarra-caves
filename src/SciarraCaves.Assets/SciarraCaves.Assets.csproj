@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SciarraCaves.Assets\SciarraCaves.Assets.csproj" />
-  </ItemGroup>
-
 </Project>
