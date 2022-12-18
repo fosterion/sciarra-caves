@@ -13,13 +13,13 @@ namespace SciarraCaves
         {
             using var db = new GameContext();
 
-            if (db.Player.Any())
+            if (db.Accounts.Any())
             {
-                Console.WriteLine(db.Player.First().Name);
+                Console.WriteLine(db.Accounts.First().Name);
                 return;
             }
 
-            db.Player.Add(new Storage.Models.Player()
+            db.Accounts.Add(new Storage.Models.Account()
             {
                 Name = "Alesha",
                 IsActive = true

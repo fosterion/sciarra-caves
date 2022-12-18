@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Assets.Models
+namespace SciarraCaves.Managers
 {
-    public class Effect
+    public class LocalizatorManager
     {
     }
 }

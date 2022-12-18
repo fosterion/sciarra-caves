@@ -9,8 +9,12 @@ namespace SciarraCaves.Assets.Models
 {
     public class Equipment
     {
-        public Weapon Weapon { get; set; }
+        public Weapon? Weapon { get; set; }
 
-        public Shield Shield { get; set; }
+        public Shield? Shield { get; set; }
+
+        public Armor? Armor { get; set; }
+
+        public Amulet? Amulet { get; set; }
     }
 }

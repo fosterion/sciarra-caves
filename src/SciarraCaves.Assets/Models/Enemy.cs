@@ -10,10 +10,21 @@ namespace SciarraCaves.Assets.Models
     {
         public string Name { get; set; }
 
+        public int Level { get; set; }
+
         public double Health { get; set; }
 
-        public double Shield { get; set; }
+        public double Armor { get; set; }
 
         public Damage Damage { get; set; }
+
+        public Enemy(string name, int level, double health, double armor, Damage damage)
+        {
+            Name = name;
+            Level = level;
+            Health = health;
+            Armor = armor;
+            Damage = damage;
+        }
     }
 }

@@ -5,10 +5,14 @@ namespace SciarraCaves.Storage
 {
     public class GameContext : DbContext
     {
-        public DbSet<Player> Player { get; set; }
+        public DbSet<Account> Accounts { get; set; }
+        public DbSet<Character> Characters { get; set; }
 
         public GameContext()
         {
+#if DEBUG
+            Database.EnsureDeleted();
+#endif
             Database.EnsureCreated();
         }
 
@@ -27,7 +31,8 @@ namespace SciarraCaves.Storage
 
         private static void CreateIndexes(ModelBuilder builder)
         {
-            builder.Entity<Player>().HasIndex(i => i.Uid).IsUnique(true);
+            builder.Entity<Account>().HasIndex(i => i.Uid).IsUnique(true);
+            builder.Entity<Character>().HasIndex(i => i.Uid).IsUnique(true);
         }
     }
 }

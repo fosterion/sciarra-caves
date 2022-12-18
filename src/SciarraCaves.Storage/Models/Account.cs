@@ -7,10 +7,14 @@ using System.Threading.Tasks;
 
 namespace SciarraCaves.Storage.Models
 {
-    public class Player : Entity
+    public class Account : Entity
     {
         public string Name { get; set; }
 
         public bool IsActive { get; set; }
+
+        public DateTime CreationDate { get; set; }
+
+        public DateTime DeletionDate { get; set; }
     }
 }

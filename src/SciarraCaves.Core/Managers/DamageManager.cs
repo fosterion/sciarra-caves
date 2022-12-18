@@ -15,7 +15,7 @@ namespace SciarraCaves.Core.Managers
         {
             var weaponDamage = weapon.Damage.InstantDamage();
 
-            if (enemy.Shield > 0)
+            if (enemy.Armor > 0)
             {
                 if (weapon is ICuttingDamage)
                 {

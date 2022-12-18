@@ -12,8 +12,16 @@ namespace SciarraCaves.Assets.Models
 
         public int Health { get; set; }
 
-        public Attributes Attributes { get; set; }
+        public CharacterAttributes Attributes { get; set; }
 
         public Equipment Equipment { get; set; }
+
+        public Character(string name, CharacterAttributes attributes)
+        {
+            Name = name;
+            Health = 100;
+            Attributes = attributes;
+            Equipment = new Equipment();
+        }
     }
 }
