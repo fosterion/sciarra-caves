@@ -20,6 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SciarraCaves.Core\SciarraCaves.Core.csproj" />
+    <ProjectReference Include="..\SciarraCaves.Managers\SciarraCaves.Managers.csproj" />
     <ProjectReference Include="..\SciarraCaves.Storage\SciarraCaves.Storage.csproj" />
   </ItemGroup>
 

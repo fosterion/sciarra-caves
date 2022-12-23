@@ -12,6 +12,10 @@ namespace SciarraCaves.Assets.Models.Equipment
     {
         public Damage Damage { get; set; }
 
+        public DamageType DamageType { get; set; }
+
+        public GripType GripType { get; set; }
+
         public Weapon(Damage damage, int needStrength, Size size, Name name, Rarity rarity)
             : base(needStrength, size, name, rarity)
         {

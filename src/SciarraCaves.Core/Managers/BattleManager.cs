@@ -9,19 +9,22 @@ namespace SciarraCaves.Core.Managers
 {
     public class BattleManager
     {
-        public void Hit(Hero character, Enemy enemy)
+        public void Hit(Hero hero, Enemy enemy)
         {
             // Calculate damage
             // Cutting weapon + armor = -5% of damage
             // Crushing weapon + armor = +5% of damage
 
             var dmgManager = new DamageManager();
-            var damage = dmgManager.CalculateDamageQuantity(character.Equipment.Weapon, enemy);
+            var damage = dmgManager.CalculateDamageQuantity(hero.Equipment.Weapon, enemy);
+
+            Console.WriteLine($"Damage: {damage}");
 
             // Hit
+            enemy.Health -= damage;
         }
 
-        public void Hit(Enemy enemy, Hero character)
+        public void Hit(Enemy enemy, Hero hero)
         {
 
         }

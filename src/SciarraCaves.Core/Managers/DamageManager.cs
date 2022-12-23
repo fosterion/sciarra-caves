@@ -1,6 +1,6 @@
-﻿using SciarraCaves.Assets.Models.Character;
+﻿using SciarraCaves.Assets.Enums;
+using SciarraCaves.Assets.Models.Character;
 using SciarraCaves.Assets.Models.Equipment;
-using SciarraCaves.Assets.Models.Weapons.DamageType;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +17,11 @@ namespace SciarraCaves.Core.Managers
 
             if (enemy.Armor > 0)
             {
-                if (weapon is ICuttingDamage)
+                if (weapon.DamageType is DamageType.Cutting)
                 {
                     weaponDamage -= weaponDamage * 0.05;
                 }
-                if (weapon is ICrushingDamage)
+                if (weapon.DamageType is DamageType.Crushing)
                 {
                     weaponDamage += weaponDamage * 0.05;
                 }
