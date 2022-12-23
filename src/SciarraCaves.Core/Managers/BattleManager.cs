@@ -1,4 +1,4 @@
-﻿using SciarraCaves.Assets.Models;
+﻿using SciarraCaves.Assets.Models.Character;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace SciarraCaves.Core.Managers
 {
     public class BattleManager
     {
-        public void Hit(Character character, Enemy enemy)
+        public void Hit(Hero character, Enemy enemy)
         {
             // Calculate damage
             // Cutting weapon + armor = -5% of damage
@@ -21,7 +21,7 @@ namespace SciarraCaves.Core.Managers
             // Hit
         }
 
-        public void Hit(Enemy enemy, Character character)
+        public void Hit(Enemy enemy, Hero character)
         {
 
         }

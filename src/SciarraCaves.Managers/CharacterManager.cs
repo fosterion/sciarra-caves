@@ -1,4 +1,4 @@
-﻿using SciarraCaves.Assets.Models;
+﻿using SciarraCaves.Assets.Models.Character;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace SciarraCaves.Managers
 {
     public class CharacterManager
     {
-        public static Character CreateCharacter(string name, CharacterAttributes attributes)
+        public static Hero CreateCharacter(string name, Attributes attributes)
         {
-            return new Character(name, attributes);
+            return new Hero(name, attributes);
         }
     }
 }

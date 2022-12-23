@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Assets.Models
+namespace SciarraCaves.Assets.Models.Character
 {
     public class Enemy
     {

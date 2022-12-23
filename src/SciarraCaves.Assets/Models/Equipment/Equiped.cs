@@ -1,13 +1,12 @@
-﻿using SciarraCaves.Assets.Models.Weapons.Base;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Assets.Models
+namespace SciarraCaves.Assets.Models.Equipment
 {
-    public class Equipment
+    public class Equiped
     {
         public Weapon? Weapon { get; set; }
 

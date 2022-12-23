@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Assets.Models.Weapons.Base
+namespace SciarraCaves.Assets.Models.Equipment
 {
-    public class Shield : HandCarriedItem
+    public class Amulet : CarriedItem
     {
-        public double ProtectionPercent { get; set; }
     }
 }

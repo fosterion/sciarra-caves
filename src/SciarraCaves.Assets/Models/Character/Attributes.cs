@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Assets.Models
+namespace SciarraCaves.Assets.Models.Character
 {
-    public class CharacterAttributes
+    public class Attributes
     {
         public int Endurance { get; set; }
 
@@ -14,7 +14,7 @@ namespace SciarraCaves.Assets.Models
 
         public int Agility { get; set; }
 
-        public CharacterAttributes(int endurance, int strength, int agility)
+        public Attributes(int endurance, int strength, int agility)
         {
             Endurance = endurance;
             Strength = strength;

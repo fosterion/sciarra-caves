@@ -1,5 +1,5 @@
-﻿using SciarraCaves.Assets.Models;
-using SciarraCaves.Assets.Models.Weapons.Base;
+﻿using SciarraCaves.Assets.Models.Character;
+using SciarraCaves.Assets.Models.Equipment;
 using SciarraCaves.Assets.Models.Weapons.DamageType;
 using System;
 using System.Collections.Generic;
@@ -30,7 +30,7 @@ namespace SciarraCaves.Core.Managers
             return weaponDamage;
         }
 
-        public void TakeDamage(Character character, Enemy enemy)
+        public void TakeDamage(Hero character, Enemy enemy)
         {
 
         }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Assets.Models.Weapons.DamageType
+namespace SciarraCaves.Assets.Enums
 {
-    public interface ICrushingDamage
+    public enum GripType
     {
+        OneHanded,
+        TwoHanded
     }
 }
