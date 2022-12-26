@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Managers
+namespace SciarraCaves.Core.Managers
 {
     public class AccountManager
     {

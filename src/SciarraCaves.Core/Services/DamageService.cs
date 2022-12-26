@@ -7,10 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SciarraCaves.Core.Managers
+namespace SciarraCaves.Core.Services
 {
-    public class DamageManager
+    public interface IDamageService
     {
+        public void SayHello();
+    }
+
+    public class DamageService : IDamageService
+    {
+        private readonly string test = "TestString";
+
         public double CalculateDamageQuantity(Weapon weapon, Enemy enemy)
         {
             var weaponDamage = weapon.Damage.InstantDamage();
@@ -30,9 +37,9 @@ namespace SciarraCaves.Core.Managers
             return weaponDamage;
         }
 
-        public void TakeDamage(Hero character, Enemy enemy)
+        public void SayHello()
         {
-
+            Console.WriteLine($"Hi, it's a {test}");
         }
     }
 }

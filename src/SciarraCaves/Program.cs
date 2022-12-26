@@ -1,49 +1,36 @@
-﻿using SciarraCaves.Core.Managers;
-using SciarraCaves.Managers;
-using SciarraCaves.Storage;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using SciarraCaves.Core.Managers;
+using SciarraCaves.Core.Services;
+using System.Security.Cryptography;
 
 namespace SciarraCaves
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            var hero = CharacterManager.CreateCharacter("hero",
-                new Assets.Models.Character.Attributes(10, 10, 10));
+            using IHost host = CreateHostBuilder(args).Build();
 
-            hero.Equipment.Weapon = new Assets.Models.Equipment.Weapon(
-                new Assets.Models.Damage(10, 24),
-                3,
-                Assets.Enums.Size.Normal,
-                new Assets.Models.Name("Pushka"),
-                Assets.Enums.Rarity.Common);
+            ExecuteScope(host.Services);
 
-            var enemy = CharacterManager.CreateEnemy("enemy",
-                10, 100, 20, new Assets.Models.Damage(10, 20));
-
-            var battleManager = new BattleManager();
-
-            battleManager.Hit(hero, enemy);
-            Console.WriteLine($"Enemy health after hit: {enemy.Health}");
+            await host.RunAsync();
         }
 
-        private static void CheckDatabaseAvailability()
+        private static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args).ConfigureServices((_, services) =>
+                services
+                    .AddTransient<IBattleService, BattleService>()
+                    .AddTransient<IDamageService, DamageService>()
+            );
+
+        private static void ExecuteScope(IServiceProvider services)
         {
-            using var db = new GameContext();
+            using IServiceScope serviceScope = services.CreateScope();
+            IServiceProvider provider = serviceScope.ServiceProvider;
 
-            if (db.Accounts.Any())
-            {
-                Console.WriteLine(db.Accounts.First().Name);
-                return;
-            }
-
-            db.Accounts.Add(new Storage.Models.Account()
-            {
-                Name = "Alesha",
-                IsActive = true
-            });
-
-            db.SaveChanges();
+            var startup = provider.GetRequiredService<IBattleService>();
+            startup.Start();
         }
     }
 }
